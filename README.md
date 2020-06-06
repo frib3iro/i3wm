@@ -1,2 +1,2 @@
 # git
-Shell script para instalação do arch linux
+Shell script para instalação do i3wm
