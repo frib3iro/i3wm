@@ -41,11 +41,10 @@ sleep 2s
 clear
 
 echo -e "${seta} ${blue}Digite${end} ${red}[ 1 ]${end} ${blue}para instalar o driver virt-manager${end}"
-echo -e "${seta} ${blue}Digite${end} ${red}[ 2 ]${end} ${blue}para instalar o driver nvidia${end}"
-echo -en "${seta} ${yellow}Qual sua resposta:${end} "
+echo -e "${seta} ${blue}Digite${end} ${red}[ 2 ]${end} ${blue}para instalar o driver nvidia${end}\n"
+echo -en "${seta} ${blue}Qual sua resposta:${end} "
 read resposta
 clear
-
 
 if [ "$resposta" -eq 1 ]; then
     echo -e "${seta} ${blue}Iniciando instalação do driver para virt-manager${end}"
@@ -63,89 +62,91 @@ else
 fi
 
 echo -e "${seta} ${blue}Instalando o i3wm desktop${end}"
-echo $pass_user | sudo -S pacman -S xorg xorg-xinit i3-wm i3lock i3status i3blocks dmenu terminator --noconfirm
 sleep 2s
+echo $pass_user | sudo -S pacman -S xorg xorg-xinit i3-wm i3lock i3status i3blocks dmenu terminator --noconfirm
 clear
 
 echo -e "${seta} ${blue}Copiando .xinitrc para o diretorio home${end}"
-echo $pass_user | sudo -S cp /etc/X11/xinit/xinitrc ~/.xinitrc
 sleep 2s
+echo $pass_user | sudo -S cp /etc/X11/xinit/xinitrc ~/.xinitrc
 clear
 
 echo -e "${seta} ${blue}Instalando o nautilus${end}"
-echo $pass_user | sudo -S pacman -S nautilus --noconfirm
 sleep 2s
+echo $pass_user | sudo -S pacman -S nautilus --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando os pacotes necessários${end}"
+sleep 2s
 echo $pass_user | sudo -S pacman -S archlinux-keyring archlinux-wallpaper bash-completion cmatrix cronie dialog gimp gnome-keyring gnome-tweaks gnupg gufw htop libreoffice libreoffice-fresh-pt-br man-db neofetch pass powerline-fonts rsync tcpdump totem ttf-hack gnu-free-fonts ttf-dejavu ttf-nerd-fonts-symbols ufw unrar xdg-user-dirs xdg-utils xf86-input-synaptics xcursor-vanilla-dmz-aa xclip youtube-dl --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando o yay${end}"
+sleep 2s
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-sleep 2s
 clear
 
 # Hackerman -------------------------------------------------------
 echo -e "${seta} ${blue}Instalando aircrack-ng e usbutils${end}"
-echo $pass_user | sudo -S pacman -S aircrack-ng usbutils --noconfirm
 sleep 2s
+echo $pass_user | sudo -S pacman -S aircrack-ng usbutils --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando o crunch${end}"
-yay -S crunch --noconfirm
 sleep 2s
+yay -S crunch --noconfirm
 clear
 # Hackerman -------------------------------------------------------
 
 echo -e "${seta} ${blue}Instalando o gnome-terminal-transparency${end}"
-yay -S gnome-terminal-transparency --noconfirm
 sleep 2s
+yay -S gnome-terminal-transparency --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando o mint-backgrounds${end}"
-yay -S mint-backgrounds --noconfirm
 sleep 2s
+yay -S mint-backgrounds --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando os${end} ${yellow}firmwares warnigs${end} ${blue}do archlinux${end}"
-yay -S aic94xx-firmware wd719x-firmware --noconfirm
 sleep 2s
+yay -S aic94xx-firmware wd719x-firmware --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando o debtap${end}"
-yay -S debtap --noconfirm
 sleep 2s
+yay -S debtap --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando o xviewer${end}"
-yay -S xviewer xviewer-plugins --noconfirm
 sleep 2s
+yay -S xviewer xviewer-plugins --noconfirm
 clear
 
 echo -e "${seta} ${blue}Instalando as fontes${end}"
+sleep 2s
 yay -S ttf-ms-fonts --noconfirm
 yay -S ttf-ubuntu-font-family --noconfirm
-sleep 2s
 clear
 
 echo -e "${seta} ${blue}Instalando o google-chrome${end}"
-yay -S google-chrome --noconfirm
 sleep 2s
+yay -S google-chrome --noconfirm
 clear
 
 echo -e "${seta} ${blue}Iniciando o xdg-update${end}"
-xdg-user-dirs-update
 sleep 2s
+xdg-user-dirs-update
+clear
 
 echo -e "${seta} ${blue}Instalando o gdm${end}"
-instalar_gdm 
 sleep 2s
+instalar_gdm 
 clear
 
 echo -e "${seta} ${blue}Iniciando o serviço do gdm${end}"
-iniciar_gdm
 sleep 2s
+iniciar_gdm
 clear
