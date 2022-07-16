@@ -1,142 +1,70 @@
 #!/usr/bin/env bash
 
 # variaveis
-user='fabio'
-root='root'
-pass_user='cp1113bug6u'
-azl='\e[34;1m'
-vrd='\e[32;1m'
-vrm='\e[31;1m'
-amr='\e[33;1m'
-fim='\e[m'
-seta='\e[32;1m==>\e[m'
+b='\e[34;1m'
+g='\e[32;1m'
+r='\e[31;1m'
+y='\e[33;1m'
+f='\e[m'
+s='\e[32;1m>>>\e[m'
 
-# Funções ------------------------------------------------------------
-driver_virtmanager(){
-    echo $pass_user | sudo -S pacman -S xf86-video-qxl --noconfirm
-}
-
-driver_nvidia(){
-    echo $pass_user | sudo -S pacman -S nvidia nvidia-utils nvidia-settings intel-ucode --noconfirm
-}
-# GDM ----------------------------------------------------------------
-instalar_gdm(){
-    echo $pass_user | sudo -S pacman -S gdm --noconfirm
-}
-iniciar_gdm(){
-    echo $pass_user | sudo -S systemctl enable gdm
-    echo $pass_user | sudo -S systemctl start gdm
-}
-
-# Tela de boas vindas
-clear
-echo -e "${seta} ${azl}Bem vindo a instalação do i3wm${fim}"
-sleep 2s
 clear
 
-# Atualizando os espelhos
-echo -e "${seta} ${azl}Atualizando...${fim}"
-echo $pass_user | sudo -S pacman -Syu --noconfirm
-sleep 2s
-clear
+listapacman=(arc-gtk-theme arc-icon-theme ttf-inconsolata ttf-droid ttf-opensans ranger ttf-font-awesome mplayer thunar aircrack-ng archlinux-wallpaper bluez bluez-utils bully capitaine-cursors cmatrix cowpatty cronie cups fdupes geany geany-plugins gst-libav gst-plugin-pipewire gufw hashcat hcxdumptool hcxtools htop libreoffice libreoffice-fresh-pt-br lollypop man-pages-pt_br mesa-demos neofetch qbittorrent reaver rsync tcpdump termshark ttf-dejavu ttf-jetbrains-mono unrar unzip wifite xclip xcursor-vanilla-dmz-aa)
 
-echo -e "${seta} ${azl}Digite${fim} ${vrm}[ 1 ]${fim} ${azl}para instalar o driver virt-manager${fim}"
-echo -e "${seta} ${azl}Digite${fim} ${vrm}[ 2 ]${fim} ${azl}para instalar o driver nvidia${fim}\n"
-echo -en "${seta} ${azl}Qual sua resposta:${fim} "
-read resposta
-clear
+listayay=(4kvideodownloader cava chrome-gnome-shell consolas-font crunch debtap downgrade google-chrome mintstick mint-y-icons onedriver pyrit spotify timeshift ttf-ms-fonts ttf-ubuntu-font-family xcursor-breeze)
 
-if [ "$resposta" -eq 1 ]; then
-    echo -e "${seta} ${azl}Iniciando instalação do driver para virt-manager${fim}"
-    sleep 2s
-    driver_virtmanager
-    clear
-elif [ "$resposta" -eq 2 ]; then
-    echo -e "${seta} ${azl}Iniciando instalação do driver para nvidia${fim}"
-    sleep 2s
-    driver_nvidia
-    clear
-else
-    echo -e "${seta} ${vrm}Resposta inválida!${fim}"
-    exit 1
-fi
+echo
+echo -e "${s} ${b}Atualizando...${f}"
+sudo pacman -Syu --noconfirm
 
-echo -e "${seta} ${azl}Instalando o i3wm desktop${fim}"
-sleep 2s
-echo $pass_user | sudo -S pacman -S xorg xorg-xinit i3-wm i3lock i3status i3blocks dmenu xfce4-terminal --noconfirm
-clear
+echo
+echo -e "${s} ${b}Instalando pacotes com pacman...${f}"
+for i in ${listapacman[@]}; do
+    echo
+    echo -e "${s} ${b}Instalando o pacote $i ${f}"
+    if sudo pacman -S $i --noconfirm; then
+        echo -e "${s} ${g}Pacote $i instalado com sucesso!${f}"
+    else
+        echo -e "${s} ${r}Houve erro na instalação do pacote $i!${f}"
+    fi
+done
 
-echo -e "${seta} ${azl}Copiando .xinitrc para o diretorio home${fim}"
-sleep 2s
-echo $pass_user | sudo -S cp /etc/X11/xinit/xinitrc ~/.xinitrc
-clear
-
-echo -e "${seta} ${azl}Instalando o nautilus${fim}"
-sleep 2s
-echo $pass_user | sudo -S pacman -S nautilus --noconfirm
-clear
-
-echo -e "${seta} ${azl}Instalando os pacotes necessários${fim}"
-sleep 2s
-echo $pass_user | sudo -S pacman -S archlinux-keyring archlinux-wallpaper cmatrix cronie dialog gimp gnome-keyring gnome-tweaks gnupg gufw htop libreoffice libreoffice-fresh-pt-br man-db neofetch pass powerline-fonts rsync totem ttf-hack gnu-free-fonts ttf-dejavu ttf-nerd-fonts-symbols ufw unrar xdg-user-dirs xdg-utils xf86-input-synaptics xcursor-vanilla-dmz-aa xclip youtube-dl --noconfirm
-clear
-
-echo -e "${seta} ${azl}Instalando o yay${fim}"
-sleep 2s
+echo
+echo -e "${s} ${b}Instalando o yay...${f}"
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-clear
+cd /home/fabio && rm -rf go yay
 
-# Hackerman -------------------------------------------------------
-echo -e "${seta} ${azl}Instalando aircrack-ng e usbutils${fim}"
-sleep 2s
-echo $pass_user | sudo -S pacman -S aircrack-ng usbutils tcpdump --noconfirm
-clear
+echo
+echo -e "${s} ${b}Instalando pacotes com yay...${f}"
+for i in ${listayay[@]}; do
+    echo
+    echo -e "${s} ${b}Instalando o pacote $i ${f}"
+    if yay -S $i --noconfirm; then
+        echo -e "${s} ${g}Pacote $i instalado com sucesso!${f}"
+    else
+        echo -e "${s} ${r}Houve erro na instalação do pacote $i!${f}"
+    fi
+done
 
-echo -e "${seta} ${azl}Instalando o crunch${fim}"
-sleep 2s
-yay -S crunch --noconfirm
-clear
-# Hackerman -------------------------------------------------------
+echo
+echo -e "${s} ${b}Removendo o nano${f}"
+sudo pacman -R nano
 
-echo -e "${seta} ${azl}Instalando os${fim} ${amr}firmwares warnigs${fim} ${azl}do archlinux${fim}"
-sleep 2s
-yay -S aic94xx-firmware wd719x-firmware --noconfirm
-clear
+echo
+echo -e "${s} ${b}Iniciando o bluez e o cups...${f}"
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+sudo systemctl enable cups.service
 
-echo -e "${seta} ${azl}Instalando o debtap${fim}"
+echo
+echo -e "${s} ${b}Colorindo a saída do pacman...${f}"
 sleep 2s
-yay -S debtap --noconfirm
-clear
+sed -i 's/#Color/Color/' /etc/pacman.conf
 
-echo -e "${seta} ${azl}Instalando o xviewer${fim}"
-sleep 2s
-yay -S xviewer xviewer-plugins --noconfirm
-clear
-
-echo -e "${seta} ${azl}Instalando as fontes${fim}"
-sleep 2s
-yay -S ttf-ms-fonts --noconfirm
-yay -S ttf-ubuntu-font-family --noconfirm
-clear
-
-echo -e "${seta} ${azl}Instalando o google-chrome${fim}"
-sleep 2s
-yay -S google-chrome --noconfirm
-clear
-
-echo -e "${seta} ${azl}Iniciando o xdg-update${fim}"
-sleep 2s
-xdg-user-dirs-update
-clear
-
-echo -e "${seta} ${azl}Instalando o gdm${fim}"
-sleep 2s
-instalar_gdm 
-clear
-
-echo -e "${seta} ${azl}Iniciando o serviço do gdm${fim}"
-sleep 2s
-iniciar_gdm
-clear
+git clone https://github.com/frib3iro/github
+mv github/*.sh .
+./git.sh
+./github.sh
