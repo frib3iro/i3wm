@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# I3gaps e pacotes essências:
-sudo pacman -S kitty gimp thunar ffmpegthumbnailer tumbler ranger
-
 # Brilho de tela
 pacman -Qi brightnessctl
 sudo pacman -S brightnessctl

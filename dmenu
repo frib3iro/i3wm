@@ -1,0 +1,5 @@
+# sudo vim /usr/bin/dmenu_run
+
+LANG="pt_BR.UTF-8" <-- Altere de acordo com sua localidade.
+dmenu_path | menu "$@" | ${SHELL:-"/bin/sh"}
+

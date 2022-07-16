@@ -10,9 +10,9 @@ s='\e[32;1m>>>\e[m'
 
 clear
 
-listapacman=(arc-gtk-theme arc-icon-theme ttf-inconsolata ttf-droid ttf-opensans ranger ttf-font-awesome mplayer thunar aircrack-ng archlinux-wallpaper bluez bluez-utils bully capitaine-cursors cmatrix cowpatty cronie cups fdupes geany geany-plugins gst-libav gst-plugin-pipewire gufw hashcat hcxdumptool hcxtools htop libreoffice libreoffice-fresh-pt-br lollypop man-pages-pt_br mesa-demos neofetch qbittorrent reaver rsync tcpdump termshark ttf-dejavu ttf-jetbrains-mono unrar unzip wifite xclip xcursor-vanilla-dmz-aa)
+listapacman=(aircrack-ng arc-gtk-theme archlinux-wallpaper arc-icon-theme bluez bluez-utils bully capitaine-cursors cmatrix cowpatty cronie cups dmenu fdupes feh ffmpegthumbnailer flameshot geany geany-plugins gimp gst-libav gst-plugin-pipewire gufw hashcat hcxdumptool hcxtools htop i3blocks i3-gaps i3status libreoffice libreoffice-fresh-pt-br links lollypop lxappearance man-pages-pt_br mesa-demos mplayer neofetch picom ranger reaver rsync tcpdump termshark thunar ttf-droid ttf-font-awesome ttf-inconsolata ttf-opensans tumbler unrar unzip wifite xclip xcursor-vanilla-dmz-aa xfce4-terminal xorg-xsetroot)
 
-listayay=(4kvideodownloader cava chrome-gnome-shell consolas-font crunch debtap downgrade google-chrome mintstick mint-y-icons onedriver pyrit spotify timeshift ttf-ms-fonts ttf-ubuntu-font-family xcursor-breeze)
+listayay=(4kvideodownloader cava consolas-font crunch debtap downgrade google-chrome mintstick mint-y-icons onedriver pyrit spotify timeshift ttf-ms-fonts ttf-ubuntu-font-family xcursor-breeze)
 
 echo
 echo -e "${s} ${b}Atualizando...${f}"
@@ -48,10 +48,6 @@ for i in ${listayay[@]}; do
         echo -e "${s} ${r}Houve erro na instalação do pacote $i!${f}"
     fi
 done
-
-echo
-echo -e "${s} ${b}Removendo o nano${f}"
-sudo pacman -R nano
 
 echo
 echo -e "${s} ${b}Iniciando o bluez e o cups...${f}"
