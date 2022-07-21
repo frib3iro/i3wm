@@ -10,7 +10,7 @@ s='\e[32;1m>>>\e[m'
 
 clear
 
-listapacman=(aircrack-ng arc-gtk-theme archlinux-wallpaper arc-icon-theme bluez bluez-utils bully capitaine-cursors cmatrix cowpatty cronie cups dmenu fdupes feh ffmpegthumbnailer flameshot geany geany-plugins gimp gst-libav gst-plugin-pipewire gufw hashcat hcxdumptool hcxtools htop i3blocks i3-gaps i3status libreoffice libreoffice-fresh-pt-br links lollypop lxappearance man-pages-pt_br mesa-demos mplayer neofetch picom ranger reaver rsync tcpdump termshark thunar ttf-droid ttf-font-awesome ttf-inconsolata ttf-opensans tumbler unrar unzip wifite xclip xcursor-vanilla-dmz-aa xfce4-terminal xorg-xsetroot)
+listapacman=(aircrack-ng arc-gtk-theme archlinux-wallpaper arc-icon-theme bluez bluez-utils bully capitaine-cursors cmatrix cowpatty cronie cups dmenu fdupes feh ffmpegthumbnailer flameshot geany geany-plugins gimp gst-libav gst-plugin-pipewire gufw hashcat hcxdumptool hcxtools htop i3lock i3blocks i3-gaps i3status libreoffice libreoffice-fresh-pt-br links lollypop lxappearance man-pages-pt_br mesa-demos mplayer neofetch picom ranger reaver rsync tcpdump termshark thunar ttf-droid ttf-font-awesome ttf-inconsolata ttf-opensans tumbler unrar unzip wifite xclip xcursor-vanilla-dmz-aa xfce4-terminal xorg-xsetroot)
 
 listayay=(4kvideodownloader cava consolas-font crunch debtap downgrade google-chrome mintstick mint-y-icons onedriver pyrit spotify timeshift ttf-ms-fonts ttf-ubuntu-font-family xcursor-breeze)
 
@@ -35,7 +35,6 @@ echo -e "${s} ${b}Instalando o yay...${f}"
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-cd /home/fabio && rm -rf go yay
 
 echo
 echo -e "${s} ${b}Instalando pacotes com yay...${f}"
@@ -64,3 +63,4 @@ git clone https://github.com/frib3iro/github
 mv github/*.sh .
 ./git.sh
 ./github.sh
+cd /home/fabio && rm -rf go yay
