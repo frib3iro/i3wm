@@ -9,5 +9,5 @@ cat >> '/etc/lightdm/slick-greeter.conf' << EOF
 background=/usr/share/backgrounds/archlinux/car02.jpg
 EOF
 
-sed -i 's/greeter-session=lightdm-gtk-greeter/greeter-
-session=lightdm-slick-greeter/' /caminho/arquivo''
+sed -i 's/greeter-session=lightdm-gtk-greeter/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf''
+
