@@ -1,0 +1,103 @@
+" Configurações Globais
+
+" Carrega todos os pacotes no momento da inicialização
+packloadall
+
+" Habilita a sintaxe e escolhe o esquema de cores
+syntax on
+set background=dark
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+colorscheme tokyonight
+
+" Números de linha e destaque da linha do cursor
+set number         " Exibe números de linha
+set cursorline     " Destaca a linha onde está o cursor
+
+" Identação e espaçamento
+set autoindent     " Habilita a identação automática
+set tabstop=4      " Define o tamanho da tabulação como 4 espaços
+set softtabstop=4  " Define a quantidade de espaços para a tecla Tab como 4
+set shiftwidth=4   " Define o tamanho da indentação como 4 espaços
+set expandtab      " Substitui a tecla Tab por espaços
+set smartindent    " Habilita a identação inteligente
+
+" Configurações de Busca
+set incsearch      " Realça a pesquisa incrementada
+set hlsearch       " Mantém a pesquisa realçada após encontrar
+
+" Exibir a barra de status sempre
+set laststatus=2   " Mostra sempre a barra de status
+
+" Outras Configurações
+set mouse=r            " Permite copiar e colar com o mouse
+set wildmenu           " Melhora o comportamento do menu de opções
+set confirm            " Requer confirmação para operações de gravação
+set hidden             " Permite ocultar buffers não salvos
+set mouse=a            " Permite o uso do mouse em todos os modos
+set scrolloff=8        " Mantém o cursor centralizado ao rolar
+set encoding=utf-8     " Define a codificação do arquivo como UTF-8
+set ignorecase         " Ignora diferenciação entre maiúsculas e minúsculas nas pesquisas
+set smartcase          " Habilita diferenciação entre maiúsculas e minúsculas se houver letras maiúsculas na pesquisa
+set nobackup           " Não cria arquivos de backup
+set nowritebackup      " Não cria arquivos de backup ao escrever
+set splitright         " Divide a tela verticalmente à direita
+set splitbelow         " Divide a tela horizontalmente abaixo
+set autoread           " Recarrega automaticamente o arquivo se for alterado fora do Vim
+filetype on            " Habilita detecção de tipo de arquivo
+filetype plugin on     " Habilita plugins específicos de tipos de arquivo
+filetype indent on     " Habilita indentação específica de tipos de arquivo
+
+" Atalhos e Mapeamentos
+
+" Mover linhas com Ctrl+(seta abaixo) ou Ctrl+(seta acima)
+nmap <C-Down> ddp
+nmap <C-Up> ddkP
+
+" Mapeia a tecla <Enter> para remover o destaque da pesquisa
+nnoremap <CR> :nohlsearch<CR>
+
+" Fechamento automático de parênteses, chaves e colchetes
+inoremap ' ''<left>
+inoremap " ""<left>
+inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+
+" para quando salvar os comando fiquem em minúsculo
+cab W w
+cab Wq wq
+cab wQ wq
+cab WQ wq
+cab Q q
+
+" Mapeia a tecla <F2> para alternar entre a numeração de linhas normal e a relative number
+nnoremap <F2> :call ToggleLineNumbers()<CR>
+
+" Define a função ToggleLineNumbers()
+function! ToggleLineNumbers()
+    if &relativenumber == 1
+        set norelativenumber
+        set number
+    else
+        set relativenumber
+        set nonumber
+    endif
+endfunction
+
+" Função para indentar o código C/C++
+function! IndentarCodigoC()
+    " Salva a posição do cursor
+    let save_cursor = getpos(".")
+    " Seleciona o bloco de código
+    normal! ggVG
+    " Indenta o código
+    normal! =
+    " Restaura a posição do cursor
+    call setpos('.', save_cursor)
+endfunction
+
+" Mapeia a tecla de atalho <F5> para chamar a função de indentação
+nnoremap <F5> :call IndentarCodigoC()<CR>

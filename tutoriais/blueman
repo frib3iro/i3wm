@@ -1,0 +1,13 @@
+I3 bluetooth applet
+
+Add a bluetooth applet to i3.
+
+sudo apt install blueman
+
+Add the following line to the i3 config.
+
+~/.config/i3/config
+
+exec --no-startup-id blueman-applet &
+
+Press Modifier+Shift+c to reload the i3 config.

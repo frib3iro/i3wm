@@ -1,0 +1,9 @@
+    2  sudo pacman -Syu
+    4  mkdir git
+    5  cd git
+    6  git clone https://github.com/frib3iro/archlinux
+
+   10  sudo pacman -S unrar
+   47  sudo pacman -S xfce4-terminal
+   53  sudo pacman -S tree
+   46  yay -S microsoft-edge-stable-bin

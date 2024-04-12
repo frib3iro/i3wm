@@ -1,0 +1,27 @@
+Usar o modo se seleção visual para selecionar o bloco a ser dobrado
+
+zf = cria uma dobra no bloco selecionado
+
+zo = para abrir uma única dobra sob o cursor.
+
+zc =  para fechar a dobra sob o cursor.
+
+zd = apaga a dobra sob o cursor
+
+" Criar uma dobra usando as chavez como delimitadoras
+zfa+shift+{
+
+zn para abrir todos as dobras.
+
+z+shift+n retorna todas as dobras para o estado original.
+
+Para salvar as dobras deve-se criar o diretório "view" dentro de .vim.
+Usar dentro do próprio vim o comado abaixo:
+:!mkdir -p .vim/view
+
+Salva as dobra   = mkview
+Carrega as dobras = loadview
+
+" Salvar e carregar as dobras automaticamente, colocar no .vimrc
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview

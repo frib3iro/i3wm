@@ -1,0 +1,13 @@
+  324  yay -Ss i3lock-color
+  325  yay -S i3lock-color
+  376  yay -Ss blueman
+  377  yay -Ss blueman
+  378  yay -S blueman
+  379  yay -Syu
+  380  yay -S blueman
+  523  yay -Syu
+  524  yay -Ss sublimetext
+  525  yay -Ss sublime-text
+  526  yay -Ss sublime-text-4
+  527  yay -Ss sublime-text-4
+  622  history | grep yay > historico03

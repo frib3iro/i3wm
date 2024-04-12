@@ -1,0 +1,500 @@
+  116  . .bashrc
+  117  vim .bashrc
+  118  . .bashrc
+  119  poweroff
+  120  pacman -Ss open-sans
+  121  pacman -Ss open-sans-mono
+  122  ls
+  123  vim install.sh 
+  124  vim historico.txt 
+  125  ls
+  126  vim .config/i3/config 
+  127  reboot
+  128  pacman -Ss ttf-opensans
+  129  sudo pacman -S ttf-opensans
+  130  pacman -Ss 	ttf-mononoki-nerd
+  131  sudo pacman -S ttf-mononoki-nerd
+  132  vim .config/i3/config 
+  133  vim .fehbg 
+  134  vim .config/i3/config 
+  135  vim install.sh 
+  136  vim .config/i3/config 
+  137  reboot
+  138  vim .config/i3/config 
+  139  reboot
+  140  ls Imagens/wallpapers/
+  141  cp *.jpg /usr/share/wallpaper/
+  142  sudo cp *.jpg /usr/share/wallpaper/
+  143  cp ~/Imagens/wallpapers/*.jpg /usr/share/wallpaper/
+  144  sudo cp ~/Imagens/wallpapers/*.jpg /usr/share/wallpaper/
+  145  vim .config/i3/config 
+  146  rip
+  147  pacman -Ss rip
+  148  mkdir /usr/share/backgrounds/archlinux
+  149  sudo mkdir /usr/share/backgrounds/archlinux
+  150  mkdir -p /usr/share/backgrounds/archlinux
+  151  sudo mkdir -p /usr/share/backgrounds/archlinux
+  152  cd /usr/share/backgrounds/archlinux/
+  153  ls
+  154  cd ..
+  155  cd ..
+  156  sudo rm backgrounds/
+  157  sudo rm -rf backgrounds
+  158  ls
+  159  sudo mkdir wallpaper
+  160  ls
+  161  cd wallpaper/
+  162  ls
+  163  cd
+  164  cd /etc/lightdm/
+  165  ls
+  166  vim lightdm-gtk-greeter.conf 
+  167  sudo vim lightdm-gtk-greeter.conf 
+  168  cd /usr/share/wallpaper/
+  169  ls
+  170  pwd
+  171  mv 'img (1).jpg' img01.jpg
+  172  sudo mv 'img (1).jpg' img01.jpg
+  173  ls
+  174  reboot
+  175  cd /usr/share/wallpaper/
+  176  ls
+  177  cd /etc/lightdm/
+  178  ls
+  179  sudo lightdm-gtk-greeter.conf 
+  180  sudo vim lightdm-gtk-greeter.conf 
+  181  ls
+  182  sudo vim slick-greeter.conf
+  183  ls
+  184  vim lightdm.conf 
+  185  sudo vim lightdm.conf 
+  186  sudo vim slick-greeter.conf 
+  187  reboot
+  188  cd /etc/lightdm/
+  189  ls
+  190  sudo vim lightdm.conf 
+  191  sudo vim lightdm-gtk-greeter.conf 
+  192  ls
+  193  vim keys.conf 
+  194  vim users.conf 
+  195  cd
+  196  ls
+  197  pacman -Ss ttf-font-awesome
+  198  sudo pacman -S ttf-font-awesome
+  199  sudo pacman -S kitty
+  200  vim .config/i3/config 
+  201  vim .config/i3/config 
+  202  ls
+  203  vim .config/i3/config 
+  204  exit
+  205  reboot
+  206  vim .config/kitty/kitty.conf 
+  207  vim .config/kitty/kitty.conf 
+  208  mkdir -p ~/.config/kitty/
+  209  vim .config/kitty/
+  210  vim ~/.config/kitty/kitty.conf
+  211  kitty
+  212  ls
+  213  unzip e7e40cf8b07cff18c6d7bd1649676abf-9797413de55973dbf646439928d81cc1fdf6891e.zip 
+  214  ls
+  215  cd e7e40cf8b07cff18c6d7bd1649676abf-9797413de55973dbf646439928d81cc1fdf6891e
+  216  ls
+  217  ls
+  218  mv kitty.conf .. 
+  219  cd ..
+  220  ls
+  221  rm e7*
+  222  rm -rf e7*
+  223  ls
+  224  vim kitty.conf 
+  225  kitty
+  226  poweroff
+  227  ls
+  228  ls /etc/lightdm/
+  229  cd /etc/lightdm/
+  230  ls
+  231  pwd
+  232  ls
+  233  vim lightdm.conf 
+  234  vim install.sh 
+  235  vim install.sh 
+  236  vim
+  237  vim install.sh 
+  238  vim .vimrc
+  239  vim .vimrc
+  240  vim .vimrc
+  241  vim .vimrc
+  242  vim .vimrc
+  243  vim .vimrc 
+  244  vim .vimrc 
+  245  vim .vimrc 
+  246  vim .vimrc 
+  247  vim .vimrc 
+  248  vim .vimrc 
+  249  vim .vimrc 
+  250  vim .vimrc 
+  251  vim .vimrc 
+  252  vim install.sh 
+  253  vim .vimrc 
+  254  ls /
+  255  ls -a /
+  256  sudo -
+  257  su
+  258  su
+  259  cd ..
+  260  cd ..
+  261  ls
+  262  su
+  263  su
+  264  cd
+  265  sudo cp .bashrc /root/
+  266  su
+  267  ls
+  268  su
+  269  ls
+  270  su
+  271  ls
+  272  sudo cp -r .vim /root/
+  273  su
+  274  ls
+  275  ls
+  276  vim /etc/xdg/picom.conf 
+  277  sudo vim /etc/xdg/picom.conf 
+  278  poweroff
+  279  cd .vim/pack/themes/start/
+  280  ls
+  281  git clone https://github.com/navarasu/onedark.nvim.git
+  282  cd ..
+  283  ls
+  284  cd..
+  285  cd ..
+  286  ls
+  287  cd plugins/
+  288  ls
+  289  cd start/
+  290  ls
+  291  git clone https://github.com/sheerun/vim-polyglot.git
+  292  ls
+  293  cd vim-polyglot/
+  294  ls
+  295  cd ..
+  296  ls
+  297  cd ..
+  298  ls
+  299  cd
+  300  cd .vim/pack/themes/start/
+  301  git clone https://github.com/ghifarit53/tokyonight-vim.git
+  302  cd
+  303  ls -a
+  304  cd /etc/xdg/
+  305  ls
+  306  pwd
+  307  vim picom.conf 
+  308  sudo vim picom.conf 
+  309  sudo vim picom.conf 
+  310  cp picom.conf ~/.config/
+  311  cd
+  312  vim .config/picom.conf 
+  313  vim .config/picom.conf 
+  314  vim
+  315  sudo apt install blueman
+  316  pacman -Ss blueman
+  317   i3lock
+  318  vim .config/i3/config 
+  319  vim .config/i3/config 
+  320  vim .config/i3/config 
+  321  vim .config/i3/config 
+  322  pacman -Ss i3lock-color
+  323  pacman -Ss i3lock-color
+  324  yay -Ss i3lock-color
+  325  yay -S i3lock-color
+  326  man i3lock
+  327  pacman -S manpages
+  328  pacman -Ss manpages
+  329  mkdir .config/scripts
+  330  vim .config/scripts/lock
+  331  ls /usr/bin/i3*
+  332  vim .config/scripts/lock 
+  333  chmod + x .config/scripts/lock 
+  334  chmod+x .config/scripts/lock 
+  335  chmod +x .config/scripts/lock 
+  336  ls .config/scripts/
+  337  cd .config/scripts/lock 
+  338  cd .config/scripts/
+  339  pwd
+  340  cd
+  341  vim .config/i3/config 
+  342  cd .config/scripts/lock 
+  343  vim .config/scripts/lock 
+  344  su
+  345  sudo su
+  346  pacman -Ss gcc
+  347  pacman -Ss gdb
+  348  sudo pacman -S gdb
+  349  pacman -Ss make
+  350  sudo pacman -S bluez bluez-utils
+  351  sudo systemctl status bluetooth
+  352   lsmod | grep btusb
+  353  sudo systemctl start bluetooth.service
+  354  sudo systemctl enable bluetooth.service
+  355  sudo systemctl status bluetooth
+  356  bluetoothctl
+  357  bluetoothctl
+  358  bluetoothctl
+  359  bluetoothctl
+  360  reboot
+  361  kitty
+  362  sudo /etc/xdg/picom.conf 
+  363  sudo vim /etc/xdg/picom.conf 
+  364  vim .config/picom.conf 
+  365  sudo vim /etc/xdg/picom.conf 
+  366  sudo cp /etc/xdg/picom.conf .config/picom.conf 
+  367  sudo vim /etc/xdg/picom.conf 
+  368  sudo vim .config/picom.conf 
+  369  :q
+  370  bluetoothctl
+  371  bluetoothctl
+  372  bluetoothctl
+  373  pacman -Ss blueman
+  374  sudo pacman -S blueman
+  375  sudo pacman -S blueman
+  376  yay -Ss blueman
+  377  yay -Ss blueman
+  378  yay -S blueman
+  379  yay -Syu
+  380  yay -S blueman
+  381  vim .config/i3/config 
+  382  vim .config/i3/config 
+  383  ls
+  384  vim blueman 
+  385  vim blueman 
+  386  vim .config/kitty/kitty.conf 
+  387  vim .config/kitty/kitty.conf 
+  388  vim .config/kitty/kitty.conf 
+  389  ls -a
+  390  ls -a .config/
+  391  ls /etc/xdg/
+  392  cp .config/picom.conf /etc/xdg/
+  393  sudo cp .config/picom.conf /etc/xdg/
+  394  ls /etc/xdg/
+  395  sudo vim /etc/xdg/picom.conf 
+  396  vim .config/i3/config 
+  397  reboot
+  398  vim .config/i3/config 
+  399  vim .config/picom.conf 
+  400  picom
+  401  xfce4-terminal
+  402  picom
+  403  picom -f
+  404  sudo vim /etc/xdg/picom.conf 
+  405  picom -f
+  406  sudo vim /etc/xdg/picom.conf 
+  407  picom -f
+  408  sudo vim /etc/xdg/picom.conf 
+  409  picom -f
+  410  vim .config/picom.conf 
+  411  picom -f
+  412  sudo vim /etc/xdg/picom.conf 
+  413  picom -f
+  414  sudo vim /etc/xdg/picom.conf 
+  415  vim .config/picom.conf 
+  416  picom -f
+  417  vim .config/picom.conf 
+  418  vim .config/picom.conf 
+  419  picom -f
+  420  picom -f -B
+  421  picom -f -b
+  422  vim .config/picom.conf 
+  423  vim .config/kitty/kitty.conf 
+  424  reboot
+  425  ls
+  426  vim kitty.conf 
+  427  vim config 
+  428  vim .vimrc 
+  429  vim .vimrc 
+  430  cp .vimrc Documentos/
+  431  cd Documentos/
+  432  ls -a
+  433  mv .vimrc vimrc.txt
+  434  ls
+  435  sudo pacman -S thunar
+  436  vim vim
+  437  vim vim
+  438  sudo pacman -S gedit gedit-plugins
+  439  vim .vimrc 
+  440  vim .vimrc 
+  441  sudo pacman -R xfce4-terminal
+  442  vim .config/i3/config 
+  443  ls
+  444  mv blueman Documentos/
+  445  vim vimrc 
+  446  rm vimrc 
+  447  ls
+  448  vim teste 
+  449  rm teste 
+  450  ls
+  451  cd vbz/
+  452  ls
+  453  vim copy.sh 
+  454  cd
+  455  rm -rf vbz
+  456  ls
+  457  pacman -Ss ttf-font-awesome
+  458  vim .config/i3/config 
+  459  ls
+  460  vim install.sh 
+  461  reboot
+  462  vim Documentos/vimrc.txt 
+  463  ls
+  464  vim vim 
+  465  vim .vimrc
+  466  vim .vimrc
+  467  vim .vimrc
+  468  vim .vimrc
+  469  vim .vimrc
+  470  ls
+  471  ls
+  472  mv Documentos/vimrc.txt .
+  473  ls
+  474  mv vimrc.txt vimrc
+  475  ls
+  476  vim vimrc 
+  477  vim vimrc 
+  478  vim vimrc 
+  479  vim vimrc 
+  480  ls -a
+  481  tree .vim
+  482  tree .vim
+  483  vim vimrc 
+  484  vim vimrc 
+  485  vivim .vimrc
+  486  vim .vimrc
+  487  vim vimrc 
+  488  vim vimrc 
+  489  ls
+  490  poweroff
+  491  ls
+  492  vim vim
+  493  ls .vim
+  494  vim vim
+  495  ls
+  496  mv vim Documentos/
+  497  ls
+  498  cd .vim
+  499  ls
+  500  vim pack/themes/start/
+  501  cd pack/themes/start/
+  502  ls
+  503  git clone https://github.com/nickaroot/vim-xcode-dark-theme.git
+  504  cd
+  505  ls
+  506  vim install.sh 
+  507  mkdir Projetos
+  508  cd Projetos/
+  509  vim OlaMundo.c
+  510  gcc ls
+  511  ls
+  512  ls
+  513  gcc OlaMundo.c -o OlaMundo
+  514  vim OlaMundo.c
+  515  gcc OlaMundo.c -o OlaMundo
+  516  vim OlaMundo.c
+  517  gcc OlaMundo.c -o OlaMundo
+  518  vim OlaMundo.c
+  519  gcc OlaMundo.c -o OlaMundo
+  520  ls
+  521  ./OlaMundo 
+  522  vim OlaMundo.c
+  523  yay -Syu
+  524  yay -Ss sublimetext
+  525  yay -Ss sublime-text
+  526  yay -Ss sublime-text-4
+  527  yay -Ss sublime-text-4
+  528  cd
+  529  ls
+  530  mv vimrc historico.txt install.sh Documentos/
+  531  ls
+  532  lss Documentos/
+  533  ls Documentos/
+  534  ls
+  535  cd git
+  536  ls
+  537  rm -rf *
+  538  ls
+  539  cd
+  540  cp .vim .vimrc .config/I
+  541  cp .vim .vimrc .config/i3/config git/
+  542* cp -r .vim .vimrc .config/i3/config
+  543  ls git/
+  544  ls -a git/
+  545  ls .vim .vimrc .config/i3/
+  546  ls .vim .vimrc .config/
+  547  ls .vim .vimrc .config/
+  548  cp .vim .vimrc .config/picom.conf git/
+  549  cp .config/picom.conf git/
+  550  cp .config/kitty/kitty.conf git/
+  551  su
+  552  su
+  553  ls Vídeos/
+  554  ls -a Vídeos/
+  555  cd Vídeos/
+  556  ls -a
+  557  mv .bashrc bashrc 
+  558  mv .vim vim 
+  559  mv .vimrc vimrc
+  560  ls -a
+  561  mkdir root
+  562  mv * root/
+  563  ls
+  564  ls root/
+  565  mv vim root/
+  566  ls -l
+  567  ls -l
+  568  sudo chow fabio:fabio vim
+  569  sudo chown fabio:fabio vim
+  570  ls -l
+  571  mv vim root/
+  572  ls
+  573  ls root/
+  574  mv root ~/Documentos/
+  575  ls
+  576  cd
+  577  ls Documentos/
+  578  mkdir fabio
+  579  ls
+  580  cd Documentos/
+  581  ls
+  582  ls
+  583  cd 
+  584  ls -a
+  585  cp -r .vim Documentos/
+  586  cd Documentos/
+  587  ls -a
+  588  vim vim
+  589  mv vim dobras
+  590  ls
+  591  ls -a
+  592  mv .vim vim
+  593  ls
+  594  ls -a
+  595  ls
+  596  mkdir fabio
+  597  ls
+  598  mv vim vimrc fabio/
+  599  ls
+  600  ls -a
+  601  vim feh.pdf 
+  602  ls
+  603  ls
+  604  cd
+  605  ls
+  606  cd git.sh 
+  607  cd i3wm/
+  608  ls
+  609  cd
+  610  ls
+  611  mv git.sh i3wm/
+  612  ls
+  613  cd i3wm/
+  614  ls
+  615  history > historico

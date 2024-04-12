@@ -1,0 +1,115 @@
+" Configurações Globais
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Isso informa ao Vim para carregar todos os pacotes no momento da inicialização.
+packloadall
+
+" Habilitar a sintaxe e escolher o esquema de cores
+syntax on
+
+"if has('termguicolors')
+"    " Turns on true terminal colors
+"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+    " Turns on 24-bit RGB color support
+"    set termguicolors
+
+    " Defines how many colors should be used. (maximum: 256, minimum: 0)
+"   set t_Co=256
+"endif
+
+set background=dark
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+
+colorscheme tokyonight
+
+" Números de linha e destaque da linha do cursor
+set number
+set cursorline
+
+" Identação e espaçamento
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" Configurações de Busca
+set incsearch
+set hlsearch
+
+" Exibir a barra de status sempre
+set laststatus=2
+
+" Outras Configurações
+set mouse=r
+set wildmenu
+set confirm
+set hidden
+set mouse=a
+set scrolloff=8
+set encoding=utf-8
+set ignorecase
+set smartcase
+set nobackup
+set nowritebackup
+set splitright
+set splitbelow
+set autoread
+filetype on
+filetype plugin on
+filetype indent on
+
+" Atalhos e Mapeamentos
+"" Mover linhas com Ctrl+(seta abaixo) ou Ctrl+(seta acima)
+nmap <C-Down> ddp
+nmap <C-Up> ddkP
+
+" Fechamento automático de parênteses
+inoremap ' ''<left>
+inoremap " ""<left>
+imap { {}<left>
+imap ( ()<left>
+imap [ []<left>
+
+" para quando salvar os comando fiquem em minúsculo
+cab W w
+cab Wq wq
+cab wQ wq
+cab WQ wq
+cab Q q
+
+" Mapeia a tecla <F2> para alternar entre a numeração de linhas normal e a relative number
+nnoremap <F2> :call ToggleLineNumbers()<CR>
+
+" Define a função ToggleLineNumbers()
+function! ToggleLineNumbers()
+    if &relativenumber == 1
+        set norelativenumber
+        set number
+    else
+        set relativenumber
+        set nonumber
+    endif
+endfunction
+
+" Função para indentar o código C/C++
+function! IndentarCodigoC()
+    " Salva a posição do cursor
+    let save_cursor = getpos(".")
+    " Seleciona o bloco de código
+    normal! ggVG
+    " Indenta o código
+    normal! =
+    " Restaura a posição do cursor
+    call setpos('.', save_cursor)
+endfunction
+
+" Mapeia a tecla de atalho <F5> para chamar a função de indentação
+nnoremap <F5> :call IndentarCodigoC()<CR>
+

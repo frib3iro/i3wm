@@ -1,0 +1,55 @@
+  129  sudo pacman -S ttf-opensans
+  131  sudo pacman -S ttf-mononoki-nerd
+  142  sudo cp *.jpg /usr/share/wallpaper/
+  144  sudo cp ~/Imagens/wallpapers/*.jpg /usr/share/wallpaper/
+  149  sudo mkdir /usr/share/backgrounds/archlinux
+  151  sudo mkdir -p /usr/share/backgrounds/archlinux
+  156  sudo rm backgrounds/
+  157  sudo rm -rf backgrounds
+  159  sudo mkdir wallpaper
+  167  sudo vim lightdm-gtk-greeter.conf 
+  172  sudo mv 'img (1).jpg' img01.jpg
+  179  sudo lightdm-gtk-greeter.conf 
+  180  sudo vim lightdm-gtk-greeter.conf 
+  182  sudo vim slick-greeter.conf
+  185  sudo vim lightdm.conf 
+  186  sudo vim slick-greeter.conf 
+  190  sudo vim lightdm.conf 
+  191  sudo vim lightdm-gtk-greeter.conf 
+  198  sudo pacman -S ttf-font-awesome
+  199  sudo pacman -S kitty
+  256  sudo -
+  265  sudo cp .bashrc /root/
+  272  sudo cp -r .vim /root/
+  277  sudo vim /etc/xdg/picom.conf 
+  308  sudo vim picom.conf 
+  309  sudo vim picom.conf 
+  315  sudo apt install blueman
+  345  sudo su
+  348  sudo pacman -S gdb
+  350  sudo pacman -S bluez bluez-utils
+  351  sudo systemctl status bluetooth
+  353  sudo systemctl start bluetooth.service
+  354  sudo systemctl enable bluetooth.service
+  355  sudo systemctl status bluetooth
+  362  sudo /etc/xdg/picom.conf 
+  363  sudo vim /etc/xdg/picom.conf 
+  365  sudo vim /etc/xdg/picom.conf 
+  366  sudo cp /etc/xdg/picom.conf .config/picom.conf 
+  367  sudo vim /etc/xdg/picom.conf 
+  368  sudo vim .config/picom.conf 
+  374  sudo pacman -S blueman
+  375  sudo pacman -S blueman
+  393  sudo cp .config/picom.conf /etc/xdg/
+  395  sudo vim /etc/xdg/picom.conf 
+  404  sudo vim /etc/xdg/picom.conf 
+  406  sudo vim /etc/xdg/picom.conf 
+  408  sudo vim /etc/xdg/picom.conf 
+  412  sudo vim /etc/xdg/picom.conf 
+  414  sudo vim /etc/xdg/picom.conf 
+  435  sudo pacman -S thunar
+  438  sudo pacman -S gedit gedit-plugins
+  441  sudo pacman -R xfce4-terminal
+  568  sudo chow fabio:fabio vim
+  569  sudo chown fabio:fabio vim
+  620  history | grep sudo > historico02
