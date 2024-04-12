@@ -11,16 +11,17 @@
 # Uso       : ./install-01.sh
 # --------------------------------------------------------
 
+echo "Instalando o yay..."
+sleep 2s
+
 sudo pacman -S git go --noconfirm
-
 git clone https://aur.archlinux.org/yay.git
-
 cd yay
-
 makepkg -si
 
+echo "Instalando as fontes..."
+sleep 2s
 
-## Fontes
 sudo pacman -S ttf-opensans
 sudo pacman -S ttf-mononoki-nerd
 
@@ -30,10 +31,16 @@ sudo pacman -S ttf-mononoki-nerd
 /etc/lightdm
 /etc/xdg/picon.conf
 
-
 # Exemplo plugins e temas no vim
-$ mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
+mkdir -p ~/.vim/pack/themes/start/ 
+echo "Baixando os temas para o vim..."
+sleep 2s
+cd ~/.vim/pack/themes/start/ 
+git clone https://github.com/ghifarit53/tokyonight-vim.git
+git clone https://github.com/joshdick/onedark.vim.git
 
+cd ~/
+mkdir -p ~/.vim/pack/plugins/start/ 
 
 
 
