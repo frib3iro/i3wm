@@ -25,3 +25,17 @@ Carrega as dobras = loadview
 " Salvar e carregar as dobras automaticamente, colocar no .vimrc
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+
+
+ zo ............... abre uma dobra
+ zR ............... abre todas as dobras do arquivo atual
+ zc ............... fecha uma dobra
+ zfap ............. cria uma dobra para o parágrafo 'ap' atual
+ zd ............... apaga o folder (não o seu conteúdo)
+ zf/casa .......... cria uma dobra até a palavra casa
+ zf'a ............. cria uma dobra até a marca 'a'
+ zj ............... desce 'j' até a próxima dobra
+ zk ............... sobe 'k' até a dobra anterior
+ zi ............... desabilita ou habilita os folders
+ :set fdl=0 ....... nivel de folder 0 (foldlevel)
+
