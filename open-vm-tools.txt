@@ -1,0 +1,3 @@
+sudo pacman -S open-vm-tools
+sudo systemctl enable vmtoolsd.service
+sudo systemctl start vmtoolsd.service
